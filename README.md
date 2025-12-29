@@ -113,8 +113,8 @@ Landing page UI prototype inspired by real-world SaaS standards.
 
 lifeoptimizely/
 │
-├── index.html
-├── image
+├── code.html
+├── screen.png
 └── README.md
 
 
