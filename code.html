@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>LifeOptimizely - Calm Productivity</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#10B981", // Emerald Mint
+              "primary-dark": "#059669",
+              "background-light": "#F9FAFB", // Off-White/Pearl
+              "background-card": "#FFFFFF", // Pure White
+              "text-main": "#1E293B", // Slate Charcoal
+              "text-sub": "#64748B", 
+              "accent-blue": "#E0F2FE", // Soft Sky Blue
+            },
+            fontFamily: {
+              "display": ["Inter", "sans-serif"],
+              "body": ["Inter", "sans-serif"],
+            },
+            borderRadius: {
+                "DEFAULT": "0.5rem",
+                "lg": "1rem", 
+                "xl": "1.5rem", 
+                "2xl": "2rem",
+                "full": "9999px"
+            },
+            boxShadow: {
+                'soft': '0 10px 40px -10px rgba(0,0,0,0.08)',
+                'glass': '0 8px 32px 0 rgba(31, 38, 135, 0.15)',
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+        }
+        .text-gradient {
+            background: linear-gradient(135deg, #10B981 0%, #0EA5E9 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+</head>
+<body class="font-display bg-background-light text-text-main overflow-x-hidden antialiased">
+<header class="sticky top-0 z-50 w-full glass-panel border-b border-slate-200/50">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex items-center justify-between h-20">
+<div class="flex items-center gap-2">
+<div class="size-8 bg-gradient-to-br from-primary to-emerald-400 rounded-lg flex items-center justify-center text-white shadow-lg shadow-emerald-200">
+<span class="material-symbols-outlined text-xl">spa</span>
+</div>
+<span class="text-xl font-bold tracking-tight text-text-main">LifeOptimizely</span>
+</div>
+<nav class="hidden md:flex gap-8">
+<a class="text-sm font-medium text-text-sub hover:text-primary transition-colors" href="#features">Features</a>
+<a class="text-sm font-medium text-text-sub hover:text-primary transition-colors" href="#how-it-works">How It Works</a>
+<a class="text-sm font-medium text-text-sub hover:text-primary transition-colors" href="#pricing">Pricing</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="hidden sm:flex items-center justify-center h-10 px-6 rounded-full bg-primary hover:bg-primary-dark text-white text-sm font-bold transition-all shadow-lg shadow-primary/20">
+                        Get Started
+                    </button>
+<button class="md:hidden p-2 text-text-main">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</div>
+</div>
+</header>
+<section class="relative pt-20 pb-32 overflow-hidden">
+<div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full max-w-7xl pointer-events-none z-0">
+<div class="absolute top-20 left-10 w-64 h-64 bg-emerald-100 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob"></div>
+<div class="absolute top-20 right-10 w-64 h-64 bg-sky-100 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob animation-delay-2000"></div>
+</div>
+<div class="relative z-10 max-w-5xl mx-auto px-4 text-center">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-50 border border-emerald-100 text-primary text-xs font-semibold mb-8">
+<span class="material-symbols-outlined text-sm">stars</span>
+<span>New: AI-Powered Daily Coaching</span>
+</div>
+<h1 class="text-5xl md:text-[64px] font-bold leading-[1.1] tracking-tight text-text-main mb-6">
+                Optimize Your Daily Life,<br class="hidden md:block"/>
+<span class="text-gradient">One Smart Decision at a Time.</span>
+</h1>
+<p class="text-lg md:text-xl text-text-sub max-w-2xl mx-auto mb-10 leading-relaxed">
+                Join 10,000+ users reclaiming their time with calm productivity. Stop the chaos and start building a life you love.
+            </p>
+<div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
+<button class="w-full sm:w-auto h-12 px-8 rounded-full bg-primary hover:bg-primary-dark text-white font-bold text-base transition-all shadow-lg shadow-emerald-200 hover:shadow-emerald-300 flex items-center justify-center gap-2">
+                    Start Free Trial
+                    <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+<button class="w-full sm:w-auto h-12 px-8 rounded-full bg-white border border-slate-200 hover:bg-slate-50 text-text-main font-bold text-base transition-all flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-primary">play_circle</span>
+                    Watch Demo
+                </button>
+</div>
+<div class="relative max-w-4xl mx-auto">
+<div class="glass-panel p-2 rounded-2xl shadow-2xl shadow-slate-200/50">
+<div class="relative rounded-xl overflow-hidden bg-white aspect-[16/10] border border-slate-100">
+<div class="absolute inset-0 bg-cover bg-center" data-alt="Modern clean dashboard interface showing productivity charts and task lists" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDTXcw6oyalTSfqCsN4-Vu6zG0mxwGMFgWOhYKtE5d4eFHpzj2Qz5OhrAilRNnXR7ji3rhuukifGEz-HYp6YICf4jOPl82P6Z0kqpyhuzDIhgSAjrcsDIANKpimMTyo3_xzxtnV4_-XxigHS-d_dIyizwn5GV9koRcWq4HkGQMLfVXzVqeLbdEJJqG1tiYmwS4lNpE8ilKhpZMfcW7uSUI_HBWNKEGexB7t3-nCMa8CWD32qP95LX-RN23k12b5Js2f4A56nT_t");'>
+<div class="absolute inset-0 bg-white/40 backdrop-blur-[2px]"></div>
+<div class="absolute inset-0 flex items-center justify-center">
+<div class="bg-white/80 backdrop-blur-md p-8 rounded-xl shadow-lg max-w-md text-center">
+<div class="size-16 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-4 text-emerald-600">
+<span class="material-symbols-outlined text-3xl">check_circle</span>
+</div>
+<h3 class="text-xl font-bold text-text-main mb-2">Daily Goal Achieved</h3>
+<p class="text-text-sub">You've completed all high-priority tasks for today. Time to relax.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="absolute -right-8 top-1/4 glass-panel p-4 rounded-xl shadow-lg hidden md:block animate-bounce animation-delay-1000">
+<div class="flex items-center gap-3">
+<div class="size-10 rounded-full bg-blue-100 flex items-center justify-center text-blue-600">
+<span class="material-symbols-outlined">trending_up</span>
+</div>
+<div>
+<p class="text-xs text-text-sub font-medium">Productivity</p>
+<p class="text-sm font-bold text-text-main">+24% This Week</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24 bg-slate-50 border-y border-slate-200/50">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center max-w-3xl mx-auto mb-16">
+<h2 class="text-3xl md:text-4xl font-bold text-text-main mb-4">Why traditional productivity fails</h2>
+<p class="text-lg text-text-sub">Most tools add to the noise. We solve the core issues that hold you back from true peace of mind.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<div class="bg-white p-8 rounded-2xl shadow-soft hover:-translate-y-1 transition-transform duration-300 border border-slate-100">
+<div class="size-12 rounded-xl bg-red-50 text-red-500 flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-2xl">checklist</span>
+</div>
+<h3 class="text-lg font-bold text-text-main mb-2">Too Many Tasks</h3>
+<p class="text-text-sub leading-relaxed">Overwhelmed by endless to-do lists that never seem to shrink, leading to burnout.</p>
+</div>
+<div class="bg-white p-8 rounded-2xl shadow-soft hover:-translate-y-1 transition-transform duration-300 border border-slate-100">
+<div class="size-12 rounded-xl bg-orange-50 text-orange-500 flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-2xl">schedule</span>
+</div>
+<h3 class="text-lg font-bold text-text-main mb-2">Poor Time Management</h3>
+<p class="text-text-sub leading-relaxed">Struggling to prioritize effectively amidst daily chaos and constant interruptions.</p>
+</div>
+<div class="bg-white p-8 rounded-2xl shadow-soft hover:-translate-y-1 transition-transform duration-300 border border-slate-100">
+<div class="size-12 rounded-xl bg-yellow-50 text-yellow-600 flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-2xl">repeat</span>
+</div>
+<h3 class="text-lg font-bold text-text-main mb-2">Inconsistent Habits</h3>
+<p class="text-text-sub leading-relaxed">Difficulty maintaining positive routines for long-term growth and stability.</p>
+</div>
+<div class="bg-white p-8 rounded-2xl shadow-soft hover:-translate-y-1 transition-transform duration-300 border border-slate-100">
+<div class="size-12 rounded-xl bg-purple-50 text-purple-500 flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-2xl">account_balance_wallet</span>
+</div>
+<h3 class="text-lg font-bold text-text-main mb-2">Financial Stress</h3>
+<p class="text-text-sub leading-relaxed">Anxiety over unmanaged expenses and budget leaks distracting from your work.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24 bg-background-light overflow-hidden" id="features">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col gap-24">
+<div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
+<div class="flex-1 w-full order-2 lg:order-1">
+<div class="relative bg-gradient-to-br from-emerald-50 to-white rounded-[2rem] p-8 border border-slate-100 shadow-soft aspect-[4/3] flex items-center justify-center group overflow-hidden">
+<div class="absolute inset-0 bg-[radial-gradient(#10B981_1px,transparent_1px)] [background-size:16px_16px] opacity-[0.05]"></div>
+<img alt="3D style task list card floating" class="rounded-xl shadow-2xl w-3/4 rotate-[-6deg] group-hover:rotate-0 transition-all duration-500" data-alt="Stylized task list interface floating in 3D space with soft shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA4SHszoWghwTVSobE5H1-pYKq4NJgwQMkgzzdeV_Q6iq-E4qsh7NAjDaUnj1o8vhdrtC-cSKIKZws27E2Rxb6JZHJsc6BfZwYme_0Z6C3U0Gb5PmvRRqU5REvDG74jvWNWHUGlH-P6vg2MZ3qW5JAVrkTE1R4ropIvSRJ50rRtnHxA3fAxdUT0dnYjSgMjrKErY6-Bb-ZeMiHNNXSZAecUp0YKgE0eUi7fhCLeh9akJyux-vTsHSBjxus5gNV-1GuHRyQ6lVxg"/>
+</div>
+</div>
+<div class="flex-1 order-1 lg:order-2">
+<div class="bg-emerald-100 text-primary w-12 h-12 rounded-full flex items-center justify-center mb-6">
+<span class="material-symbols-outlined">task_alt</span>
+</div>
+<h3 class="text-3xl font-bold text-text-main mb-4">Smart Task Planning</h3>
+<p class="text-lg text-text-sub mb-6">Let our AI auto-prioritize your day based on your energy levels and deadlines. Focus on what truly matters, not just what's next.</p>
+<ul class="space-y-3">
+<li class="flex items-center gap-3 text-text-main font-medium">
+<span class="material-symbols-outlined text-primary">check</span> Energy-based scheduling
+                        </li>
+<li class="flex items-center gap-3 text-text-main font-medium">
+<span class="material-symbols-outlined text-primary">check</span> Drag-and-drop calendar
+                        </li>
+</ul>
+</div>
+</div>
+<div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
+<div class="flex-1 order-1">
+<div class="bg-blue-100 text-blue-600 w-12 h-12 rounded-full flex items-center justify-center mb-6">
+<span class="material-symbols-outlined">track_changes</span>
+</div>
+<h3 class="text-3xl font-bold text-text-main mb-4">Visual Habit Tracking</h3>
+<p class="text-lg text-text-sub mb-6">Build streaks that actually stick. Visualize your progress with beautiful heatmaps and gentle reminders that keep you accountable.</p>
+<ul class="space-y-3">
+<li class="flex items-center gap-3 text-text-main font-medium">
+<span class="material-symbols-outlined text-primary">check</span> Interactive heatmaps
+                        </li>
+<li class="flex items-center gap-3 text-text-main font-medium">
+<span class="material-symbols-outlined text-primary">check</span> Smart notifications
+                        </li>
+</ul>
+</div>
+<div class="flex-1 w-full order-2">
+<div class="relative bg-gradient-to-br from-blue-50 to-white rounded-[2rem] p-8 border border-slate-100 shadow-soft aspect-[4/3] flex items-center justify-center group overflow-hidden">
+<div class="absolute inset-0 bg-[radial-gradient(#0EA5E9_1px,transparent_1px)] [background-size:16px_16px] opacity-[0.05]"></div>
+<img alt="Habit tracking graph interface" class="rounded-xl shadow-2xl w-3/4 rotate-[6deg] group-hover:rotate-0 transition-all duration-500" data-alt="Clean data visualization charts showing habit streaks and progress bars" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDKaOPeQPPYCtzA08ugsqI1QVVqwv6ve3ymVSo-Srk8hT7e3HWegcg7kC9VAp95ywUfBeybfLp9cIiCuFr9h4puBa-cahUpVStFpFmjq4xOgrSkzEsbdTRZTtPJ_ymVhBHTIGM9wKhcgLotp9oAm60QBqP-SsyjBaB2DTf6qupxDFXw_FhjnzMXCGmEyRxGtvZ1C9crp1PQwwgVzW3XuarpTum5c028bIEdm1mhHlH0x-9V25m4jSmVDgECoeGasvUUFaE5Icyo"/>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="bg-white p-8 rounded-[2rem] border border-slate-100 shadow-sm flex flex-col h-full">
+<div class="w-12 h-12 bg-purple-100 text-purple-600 rounded-2xl flex items-center justify-center mb-6">
+<span class="material-symbols-outlined">savings</span>
+</div>
+<h3 class="text-2xl font-bold text-text-main mb-3">Expense Tracking</h3>
+<p class="text-text-sub mb-8 flex-1">Integrated budget management to reduce financial anxiety. Know exactly where your money goes.</p>
+<div class="h-48 bg-slate-50 rounded-xl w-full relative overflow-hidden flex items-center justify-center">
+<div class="absolute inset-0 bg-[radial-gradient(#e2e8f0_1px,transparent_1px)] [background-size:16px_16px] opacity-50"></div>
+<div class="relative bg-white p-4 rounded-2xl shadow-sm border border-slate-100 flex items-center gap-6 pr-8">
+<div class="relative size-24 rounded-full" style="background: conic-gradient(#10B981 0% 40%, #0EA5E9 40% 70%, #A855F7 70% 100%);">
+<div class="absolute inset-4 bg-white rounded-full flex items-center justify-center">
+<span class="text-xs font-bold text-slate-500">$2.4k</span>
+</div>
+</div>
+<div class="space-y-2">
+<div class="flex items-center gap-2">
+<div class="size-2.5 rounded-full bg-emerald-500"></div>
+<span class="text-xs font-medium text-slate-600">Essentials</span>
+</div>
+<div class="flex items-center gap-2">
+<div class="size-2.5 rounded-full bg-sky-500"></div>
+<span class="text-xs font-medium text-slate-600">Savings</span>
+</div>
+<div class="flex items-center gap-2">
+<div class="size-2.5 rounded-full bg-purple-500"></div>
+<span class="text-xs font-medium text-slate-600">Lifestyle</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-white p-8 rounded-[2rem] border border-slate-100 shadow-sm flex flex-col h-full">
+<div class="w-12 h-12 bg-teal-100 text-teal-600 rounded-2xl flex items-center justify-center mb-6">
+<span class="material-symbols-outlined">psychology</span>
+</div>
+<h3 class="text-2xl font-bold text-text-main mb-3">AI Daily Suggestions</h3>
+<p class="text-text-sub mb-8 flex-1">Receive personalized tips every morning based on your previous day's performance and sleep data.</p>
+<div class="h-48 bg-slate-50 rounded-xl w-full relative overflow-hidden flex flex-col justify-center px-6 py-4">
+<div class="absolute inset-0 bg-[radial-gradient(#e2e8f0_1px,transparent_1px)] [background-size:16px_16px] opacity-50"></div>
+<div class="relative flex gap-3 mb-4 z-10">
+<div class="size-8 rounded-full bg-gradient-to-br from-teal-400 to-emerald-500 flex items-center justify-center text-white shadow-md flex-shrink-0 mt-1">
+<span class="material-symbols-outlined text-sm">auto_awesome</span>
+</div>
+<div class="bg-white p-4 rounded-2xl rounded-tl-sm shadow-sm border border-slate-100 max-w-[85%]">
+<p class="text-xs font-bold text-teal-600 mb-1">Morning Insight</p>
+<p class="text-xs text-slate-600 leading-relaxed">
+                                    You had great focus yesterday! Try scheduling your deep work block at 9:00 AM today.
+                                </p>
+</div>
+</div>
+<div class="flex justify-end z-10 opacity-50">
+<div class="bg-blue-50 px-4 py-2 rounded-2xl rounded-tr-sm border border-blue-100">
+<div class="h-2 w-16 bg-blue-200 rounded-full"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24 bg-white" id="how-it-works">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center mb-20">
+<h2 class="text-3xl md:text-4xl font-bold text-text-main">Effortless Progression</h2>
+</div>
+<div class="relative">
+<div class="hidden md:block absolute top-12 left-[10%] right-[10%] h-0.5 bg-slate-100 z-0">
+<div class="absolute top-0 left-0 h-full w-1/2 bg-gradient-to-r from-transparent via-primary to-transparent opacity-50"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12 relative z-10">
+<div class="flex flex-col items-center text-center">
+<div class="w-24 h-24 rounded-full bg-white border-4 border-slate-50 shadow-xl flex items-center justify-center mb-6 relative">
+<span class="text-4xl font-black text-slate-200 absolute -top-4 -right-2">1</span>
+<span class="material-symbols-outlined text-4xl text-primary">person_add</span>
+</div>
+<h3 class="text-xl font-bold text-text-main mb-2">Create Profile</h3>
+<p class="text-text-sub max-w-xs">Answer a few simple questions about your goals and lifestyle.</p>
+</div>
+<div class="flex flex-col items-center text-center">
+<div class="w-24 h-24 rounded-full bg-white border-4 border-slate-50 shadow-xl flex items-center justify-center mb-6 relative">
+<span class="text-4xl font-black text-slate-200 absolute -top-4 -right-2">2</span>
+<span class="material-symbols-outlined text-4xl text-primary">dashboard_customize</span>
+</div>
+<h3 class="text-xl font-bold text-text-main mb-2">Organize Life</h3>
+<p class="text-text-sub max-w-xs">Connect your calendars and financial accounts in one click.</p>
+</div>
+<div class="flex flex-col items-center text-center">
+<div class="w-24 h-24 rounded-full bg-white border-4 border-slate-50 shadow-xl flex items-center justify-center mb-6 relative">
+<span class="text-4xl font-black text-slate-200 absolute -top-4 -right-2">3</span>
+<span class="material-symbols-outlined text-4xl text-primary">rocket_launch</span>
+</div>
+<h3 class="text-xl font-bold text-text-main mb-2">Get Guidance</h3>
+<p class="text-text-sub max-w-xs">Start receiving actionable AI insights to improve daily.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24 bg-slate-50">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center mb-16">
+<h2 class="text-3xl md:text-4xl font-bold text-text-main mb-4">Designed for your lifestyle</h2>
+<p class="text-text-sub">Every detail crafted for clarity and ease of use.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-[300px]">
+<div class="md:col-span-2 bg-[#102216] rounded-3xl p-8 relative overflow-hidden group">
+<div class="relative z-10">
+<h3 class="text-2xl font-bold text-white mb-2">Elegant Dark Mode</h3>
+<p class="text-gray-400 max-w-sm">Easy on the eyes for those late night planning sessions. Seamlessly switches with your system.</p>
+</div>
+<div class="absolute right-0 bottom-0 w-2/3 h-3/4 bg-slate-800 rounded-tl-2xl border-t border-l border-slate-700 shadow-2xl translate-y-4 translate-x-4 transition-transform group-hover:translate-x-2 group-hover:translate-y-2">
+<div class="p-6">
+<div class="w-full h-4 bg-slate-700 rounded mb-4"></div>
+<div class="w-2/3 h-4 bg-slate-700 rounded mb-8"></div>
+<div class="flex gap-4">
+<div class="w-12 h-12 bg-emerald-900/50 rounded-lg"></div>
+<div class="w-12 h-12 bg-emerald-900/50 rounded-lg"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="md:col-span-1 bg-white rounded-3xl p-8 border border-slate-100 shadow-sm relative overflow-hidden flex flex-col items-center">
+<h3 class="text-xl font-bold text-text-main mb-2 text-center">Mobile First</h3>
+<div class="flex-1 w-full relative mt-4">
+<div class="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-64 bg-slate-900 rounded-[2rem] border-4 border-slate-800 shadow-xl overflow-hidden">
+<img alt="Mobile UI" class="w-full h-full object-cover opacity-80" data-alt="Mobile app interface screen" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCatK-0f9IZyXDzJpJSfzrp4LdrCDkcOUkCvKLMu15XZbShIXf8ZaoerbIIQoXSp1MJ3DO_BkyzwWM_znv0cJTfEtjYw3BJJZT20SpQFuXueeFoW4aNDrr85F6Ln45zRUvLdZVkiBmg7qIMxiYVA0i2eNeVknJ9fHrfdGcEU51XBtK4Z9w8g9f7My9QRjcUVrb__HWfzGWykf0A09f_U3HetAb1Py3CbxeJfagqf_mJbjYN6OiF2NpazOCNNbXdUtXE7cjva7zd"/>
+</div>
+</div>
+</div>
+<div class="md:col-span-1 bg-white rounded-3xl p-8 border border-slate-100 shadow-sm relative overflow-hidden group">
+<div class="absolute top-0 right-0 p-4 opacity-10">
+<span class="material-symbols-outlined text-9xl">local_fire_department</span>
+</div>
+<div class="relative z-10 flex flex-col h-full justify-between">
+<div>
+<h3 class="text-xl font-bold text-text-main mb-2">Streak System</h3>
+<p class="text-text-sub text-sm">Gamified progress to keep you motivated.</p>
+</div>
+<div class="flex items-center gap-2 mt-4">
+<span class="text-5xl font-black text-orange-500">30</span>
+<span class="text-sm font-bold text-text-main uppercase tracking-wide">Day<br/>Streak</span>
+</div>
+</div>
+</div>
+<div class="md:col-span-2 bg-gradient-to-r from-accent-blue to-white rounded-3xl p-8 border border-slate-100 shadow-sm relative overflow-hidden flex items-center">
+<div class="flex-1 z-10">
+<h3 class="text-2xl font-bold text-text-main mb-2">Focus Mode</h3>
+<p class="text-text-sub max-w-sm">Block distractions and immerse yourself in deep work with our integrated timer and soundscapes.</p>
+<button class="mt-6 px-6 py-2 bg-white rounded-full text-sm font-bold shadow-sm hover:shadow-md transition-all text-text-main">Try Focus Mode</button>
+</div>
+<div class="absolute right-0 top-0 h-full w-1/2 flex items-center justify-center opacity-50">
+<span class="material-symbols-outlined text--[12rem] text-blue-200">headphones</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24 bg-emerald-50/30 border-t border-slate-100">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center mb-16">
+<div class="inline-flex items-center justify-center px-4 py-1.5 rounded-full border border-emerald-200 bg-white text-emerald-600 text-xs font-bold tracking-wide uppercase mb-6 shadow-sm">
+                Coming Soon
+            </div>
+<h2 class="text-3xl md:text-5xl font-bold text-text-main mb-4 tracking-tight">Built to Grow With You</h2>
+<p class="text-lg text-text-sub max-w-2xl mx-auto">We're constantly evolving to serve you better</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition-all duration-300">
+<div class="w-14 h-14 rounded-2xl bg-emerald-100 flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-emerald-600 text-3xl">headphones</span>
+</div>
+<h3 class="text-xl font-bold text-text-main mb-3">Expert Podcasts</h3>
+<p class="text-text-sub">Learn from productivity and wellness experts</p>
+</div>
+<div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition-all duration-300">
+<div class="w-14 h-14 rounded-2xl bg-blue-100 flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-blue-600 text-3xl">group</span>
+</div>
+<h3 class="text-xl font-bold text-text-main mb-3">Human Coaching</h3>
+<p class="text-text-sub">One-on-one guidance from certified coaches</p>
+</div>
+<div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition-all duration-300">
+<div class="w-14 h-14 rounded-2xl bg-purple-100 flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-purple-600 text-3xl">smartphone</span>
+</div>
+<h3 class="text-xl font-bold text-text-main mb-3">Mobile App</h3>
+<p class="text-text-sub">Take LifeOptimizely everywhere you go</p>
+</div>
+<div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition-all duration-300">
+<div class="w-14 h-14 rounded-2xl bg-orange-100 flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-orange-600 text-3xl">psychology</span>
+</div>
+<h3 class="text-xl font-bold text-text-main mb-3">Smarter AI</h3>
+<p class="text-text-sub">Advanced personalization that learns from you</p>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24 bg-background-light relative border-t border-slate-200/50">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center max-w-3xl mx-auto mb-16">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 border border-blue-100 text-blue-600 text-xs font-semibold mb-4">
+<span class="material-symbols-outlined text-sm">favorite</span>
+<span>Loved by thousands</span>
+</div>
+<h2 class="text-3xl md:text-4xl font-bold text-text-main mb-4">Stories of Calm Productivity</h2>
+<p class="text-lg text-text-sub">See how LifeOptimizely is helping professionals, creators, and leaders build better lives.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<div class="bg-background-card p-8 rounded-2xl shadow-soft border border-slate-100 flex flex-col h-full hover:shadow-lg transition-shadow duration-300">
+<div class="flex items-center gap-4 mb-6">
+<div class="h-12 w-12 rounded-full bg-slate-200 overflow-hidden flex-shrink-0">
+<img alt="Portrait of Sarah M." class="h-full w-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAorDJbWEFi5JW4jp252KF7VX4cVDx4bZgOBIu4N_A3T760cUPM7xEnrYrFXwluxiWMRsujWeygs2OEjLBjt5MItMceypuGgyJqmQPzKiqhDIPCN1x9DN1ZUssXo32hJgJmVEnq1RrPYosadaXI-u86LhGd9vhvK4Y1HRRa5N5XtPECVdT6-6CGXk2EjHF7hKErGf_GuKBS41nvqtlZGu0MXgbWvvftUPUsyZQslVUapvGIGUmoqPuBx9XApbrEK2ofmW9tH-bf"/>
+</div>
+<div>
+<h4 class="font-bold text-text-main">Sarah M.</h4>
+<p class="text-xs text-text-sub">Freelance Designer</p>
+</div>
+<div class="ml-auto text-emerald-400">
+<span class="material-symbols-outlined text-xl">format_quote</span>
+</div>
+</div>
+<p class="text-text-sub leading-relaxed italic">"I used to feel guilty every time I took a break. LifeOptimizely taught me that rest is part of the work. My output has actually doubled since I started using the energy-based scheduling."</p>
+<div class="mt-6 pt-6 border-t border-slate-50 flex items-center gap-1">
+<span class="material-symbols-outlined text-yellow-400 text-sm">star</span>
+<span class="material-symbols-outlined text-yellow-400 text-sm">star</span>
+<span class="material-symbols-outlined text-yellow-400 text-sm">star</span>
+<span class="material-symbols-outlined text-yellow-400 text-sm">star</span>
+<span class="material-symbols-outlined text-yellow-400 text-sm">star</span>
+</div>
+</div>
+<div class="bg-background-card p-8 rounded-2xl shadow-soft border border-slate-100 flex flex-col h-full hover:shadow-lg transition-shadow duration-300">
+<div class="flex items-center gap-4 mb-6">
+<div class="h-12 w-12 rounded-full bg-slate-200 overflow-hidden flex-shrink-0">
+<img alt="Portrait of David K." class="h-full w-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA9SG63uq-H4STI39P6RauVv6snMKT23y_OESs9wII4UDyFKQITMhMY1MFyVDdxCwIZC2r2HH0v_Fnuuwinl7w-RmWqNUDv7jMomA34VbW2NC6do3KNIQXJu4MDgcyAmFNeRKgzmXNRtuWYSj3Gdr6LvkRTdaugk0IKYXIxj1bNKaIc7MQ9GcIk-N_ach-rbh_7vEnn8Hnydgn66a_H1i3-M-iwt876f_kNRYqRyB7bnypZSIkYZV9haUbiCr6hGu0GJIAwtuZe"/>
+</div>
+<div>
+<h4 class="font-bold text-text-main">David K.</h4>
+<p class="text-xs text-text-sub">Startup Founder</p>
+</div>
+<div class="ml-auto text-emerald-400">
+<span class="material-symbols-outlined text-xl">format_quote</span>
+</div>
+</div>
+<p class="text-text-sub leading-relaxed italic">"The financial stress was killing my creativity. Having my budget and tasks in one place made everything clearer. It's the only app I open every single morning without fail."</p>
+<div class="mt-6 pt-6 border-t border-slate-50 flex items-center gap-1">
+<span class="material-symbols-outlined text-yellow-400 text-sm">star</span>
+<span class="material-symbols-outlined text-yellow-400 text-sm">star</span>
+<span class="material-symbols-outlined text-yellow-400 text-sm">star</span>
+<span class="material-symbols-outlined text-yellow-400 text-sm">star</span>
+<span class="material-symbols-outlined text-yellow-400 text-sm">star</span>
+</div>
+</div>
+<div class="bg-background-card p-8 rounded-2xl shadow-soft border border-slate-100 flex flex-col h-full hover:shadow-lg transition-shadow duration-300">
+<div class="flex items-center gap-4 mb-6">
+<div class="h-12 w-12 rounded-full bg-slate-200 overflow-hidden flex-shrink-0">
+<img alt="Portrait of Elena R." class="h-full w-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBlfP12XYoe15QyJEiWhIhHDS0_-pbCGRNh939BUR5abKM0nhfz-DM624w-3ee1m5JvJ1HAQNXZByvf4wgFDwxZd4UpyPyvO40uUFCEBEWMof7iuo1DFBnnAB8tf1sgTbd8NZOJ3UlalhcFSnj7NL72I8FzHc8-UHQduowtb1Ryw2c3Fp-UUSrnP1qaN8rZAa3tyGeKWdfsHMEFtaZ0Q2PODrBlWjJL2yQGm66CxMa4LXCZN3xxTNhieAA_pDEwcPHmWoeATG-O"/>
+</div>
+<div>
+<h4 class="font-bold text-text-main">Elena R.</h4>
+<p class="text-xs text-text-sub">Content Creator</p>
+</div>
+<div class="ml-auto text-emerald-400">
+<span class="material-symbols-outlined text-xl">format_quote</span>
+</div>
+</div>
+<p class="text-text-sub leading-relaxed italic">"I've tried every productivity tool out there. This is different. It doesn't nag you; it guides you. The streak system is surprisingly motivating but in a gentle, supportive way."</p>
+<div class="mt-6 pt-6 border-t border-slate-50 flex items-center gap-1">
+<span class="material-symbols-outlined text-yellow-400 text-sm">star</span>
+<span class="material-symbols-outlined text-yellow-400 text-sm">star</span>
+<span class="material-symbols-outlined text-yellow-400 text-sm">star</span>
+<span class="material-symbols-outlined text-yellow-400 text-sm">star</span>
+<span class="material-symbols-outlined text-yellow-400 text-sm">star</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24 relative overflow-hidden">
+<div class="absolute inset-0 bg-gradient-to-br from-primary to-teal-600 z-0"></div>
+<div class="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] z-0"></div>
+<div class="max-w-4xl mx-auto px-4 text-center relative z-10">
+<h2 class="text-4xl md:text-5xl font-bold text-white mb-8 tracking-tight">Start Optimizing Your Life Today.</h2>
+<p class="text-emerald-50 text-xl mb-10 max-w-2xl mx-auto">No credit card required. Cancel anytime. Join the movement towards calm productivity.</p>
+<button class="h-14 px-10 rounded-full bg-white text-primary text-lg font-bold hover:shadow-2xl hover:scale-105 transition-all duration-300">
+                Get Started Now
+            </button>
+<p class="mt-6 text-emerald-100 text-sm opacity-80">Free 30-day trial included</p>
+</div>
+</section>
+<footer class="bg-slate-50 border-t border-slate-200 pt-16 pb-8">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+<div class="col-span-1">
+<div class="flex items-center gap-2 mb-4">
+<div class="size-6 bg-primary rounded-md flex items-center justify-center text-white">
+<span class="material-symbols-outlined text-sm">spa</span>
+</div>
+<span class="text-lg font-bold text-text-main">LifeOptimizely</span>
+</div>
+<p class="text-text-sub text-sm leading-relaxed">
+                        Making productivity human again. We help you achieve more by doing less, but better.
+                    </p>
+</div>
+<div>
+<h4 class="font-bold text-text-main mb-4">Product</h4>
+<ul class="space-y-2 text-sm text-text-sub">
+<li><a class="hover:text-primary" href="#">Features</a></li>
+<li><a class="hover:text-primary" href="#">Pricing</a></li>
+<li><a class="hover:text-primary" href="#">Download</a></li>
+<li><a class="hover:text-primary" href="#">Changelog</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold text-text-main mb-4">Company</h4>
+<ul class="space-y-2 text-sm text-text-sub">
+<li><a class="hover:text-primary" href="#">About Us</a></li>
+<li><a class="hover:text-primary" href="#">Careers</a></li>
+<li><a class="hover:text-primary" href="#">Blog</a></li>
+<li><a class="hover:text-primary" href="#">Contact</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold text-text-main mb-4">Legal</h4>
+<ul class="space-y-2 text-sm text-text-sub">
+<li><a class="hover:text-primary" href="#">Privacy Policy</a></li>
+<li><a class="hover:text-primary" href="#">Terms of Service</a></li>
+<li><a class="hover:text-primary" href="#">Cookie Policy</a></li>
+</ul>
+</div>
+</div>
+<div class="pt-8 border-t border-slate-200 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="text-sm text-text-sub">© 2026 LifeOptimizely Inc. All rights reserved.</p>
+<div class="flex gap-4">
+<a class="text-slate-400 hover:text-primary transition-colors" href="https://www.linkedin.com/in/mutasim-fuad-rafi-32b67828a/">
+<span class="sr-only">LinkedIn</span>
+<svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"></path></svg>
+</a>
+<a class="text-slate-400 hover:text-primary transition-colors" href="#">
+<span class="sr-only">GitHub</span>
+<svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24"><path clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" fill-rule="evenodd"></path></svg>
+</a>
+</div>
+</div>
+</div>
+</footer>
+</body></html>
